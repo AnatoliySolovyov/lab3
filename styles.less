@@ -1,0 +1,62 @@
+@base-color: #cacaca;
+@accent-color: #57a78c;
+@font-family: 'Open Sans', sans-serif;
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: @font-family;
+    background-color: @base-color;
+}
+
+header {
+    background-color: @accent-color;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background: lighten(@accent-color, 40%);
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: @accent-color;
+            padding: 5px 10px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    section {
+        margin-bottom: 20px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: darken(@base-color, 10%);
+    color: white;
+}
+
